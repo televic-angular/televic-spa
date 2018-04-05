@@ -1,0 +1,53 @@
+@import 'sass-test/index'
+
+.variables-test-
+  font-size: $font14px
+  color: $font-color
+
+.variables-test_
+  font-size: $font14px
+  color: $font_color
+
+.mixins-test
+  width: 200px
+  padding: 5px 30px
+  margin: 10px auto
+  border: 1px #ddd solid
+  text-align: center
+  +border-radius(10px)
+
+
+// extend test
+.message
+  width: 300px
+  border: 1px solid #ccc
+  padding: 10px
+  margin: 6px auto 0
+  color: #333
+
+.success
+  @extend .message
+  border-color: green
+
+.error
+  @extend .message
+  border-color: red
+
+.warning
+  @extend .message
+  border-color: green
+
+
+.operators
+  width: 100%
+
+div[role="parents"]
+  float: left
+  width: 600px / 960px * 100%
+  border: 1px #ddd solid
+
+div[role="children"]
+  float: right
+  width: 300px / 960px * 100%
+  border: 1px #ddd solid
+
